@@ -1,0 +1,53 @@
+
+print("Enter 1 for Encript")
+print("Enter 2 for Decript")
+print("Enter 3 for Exit")
+
+k = 3
+encr=[]
+dcr=[]
+msg =''
+count = 0
+alp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+loop=000
+while loop !=100:
+    swt = input("TYPE:")
+    while swt != 3:
+        inputWord = input("Enter Your Word :")
+        if swt ==1:
+            for x in inputWord:
+                for y in alp:
+                    if x in y:
+                        if count==0:
+                            encr.insert(0,(alp.index(y))+k)
+                            count = 1+count
+                        else:
+                            encr.insert(count,(alp.index(y))+k)  
+                            count = 1+count
+                 #print(alp[''.join(int(x) for x in ancr)])
+            print("Encripted message is :-")
+            for w in encr:
+                    print(alp[w])
+                    swt = 3;
+                    
+        
+        if swt ==2:
+            count = 0
+            for x in inputWord:
+                for y in alp:
+                    if x in y:
+                        if count==0:
+                           
+                            dcr.insert(0,(alp.index(y))-k)
+                            count = 1+count
+                        else:
+                            dcr.insert(count,(alp.index(y))-k)
+                            count = 1+count
+            print("Decription is :")
+            for w1 in dcr:
+                print(alp[w1])
+                swt = 3;
+               
+        if swt ==3:
+            print("exit")
+            
